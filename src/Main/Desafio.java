@@ -157,7 +157,7 @@ public class Desafio extends Application {
         
         //Scene 5
         Label label5 = new Label("Malla a utilizar");
-        label5.setLayoutX(415);
+        label5.setLayoutX(400);
         label5.setLayoutY(50);
         label5.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
@@ -189,7 +189,7 @@ public class Desafio extends Application {
         
         //Scene 6
         Label label6 = new Label("Tabla de conectividades");
-        label6.setLayoutX(335);
+        label6.setLayoutX(325);
         label6.setLayoutY(50);
         label6.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
@@ -255,20 +255,56 @@ public class Desafio extends Application {
         
         //Scene 8
         Label label8 = new Label("Paso 2");
+        label8.setLayoutX(450);
+        label8.setLayoutY(50);
+        label8.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image7 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso2.png"));
+        ImageView imageView7 = new ImageView(image7);
+        imageView7.setX(50);
+        imageView7.setY(200);
+        imageView7.setFitHeight(275);
+        imageView7.setFitWidth(550);
+        
         Button btn8 = new Button("Paso 3");
         btn8.setLayoutY(500);
         btn8.setLayoutX(850);
         btn8.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Label desc7 = new Label("Lo unico que se necesito hacer en este paso\nfue la interpolacion de cada incognita.\n"
+                + "Lo cual como resultado final obtenemos 2\nvectores 4x1 uno que contiene las funciones\nde forma y el otro las incognitas.");
+        desc7.setLayoutX(600);
+        desc7.setLayoutY(250);
+        desc7.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         btn8.setOnAction(e -> primaryStage.setScene(scene9));
         Pane layout8 = new Pane();
-        layout8.getChildren().addAll(label8, btn8);
+        layout8.getChildren().addAll(label8, btn8, imageView7,desc7);
         layout8.setStyle("-fx-background-color: #404A7C");
         scene8 = new Scene(layout8, 1000, 600);
         
         //Scene 9
         Label label9 = new Label("Paso 3");
+        label9.setLayoutX(450);
+        label9.setLayoutY(50);
+        label9.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image8 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso3.png"));
+        ImageView imageView8 = new ImageView(image8);
+        imageView8.setX(50);
+        imageView8.setY(180);
+        imageView8.setFitHeight(150);
+        imageView8.setFitWidth(900);
+        
+        Label desc8 = new Label("En este paso solo se despeja toda la ecuacion para el lado izquierdo e aplicar ha ambas ecuaciones la\ndefinicion del residual a cada una.");
+        desc8.setLayoutX(25);
+        desc8.setLayoutY(420);
+        desc8.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn9 = new Button("Paso 4");
         btn9.setLayoutY(500);
         btn9.setLayoutX(850);
@@ -277,26 +313,64 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn9.setOnAction(e -> primaryStage.setScene(scene10));
         Pane layout9 = new Pane();
-        layout9.getChildren().addAll(label9, btn9);
+        layout9.getChildren().addAll(label9, btn9, imageView8, desc8);
         layout9.setStyle("-fx-background-color: #404A7C");
         scene9 = new Scene(layout9, 1000, 600);
 
         //Scene 10
         Label label10 = new Label("Paso 4");
+        label10.setLayoutX(450);
+        label10.setLayoutY(50);
+        label10.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image9 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso4.png"));
+        ImageView imageView9 = new ImageView(image9);
+        imageView9.setX(45);
+        imageView9.setY(170);
+        imageView9.setFitHeight(275);
+        imageView9.setFitWidth(550);
+        
         Button btn10 = new Button("Paso 5");
         btn10.setLayoutY(500);
         btn10.setLayoutX(850);
         btn10.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Label desc9 = new Label("Lo que se busca en este paso es multiplicar\nel residual por un peso y despues integrarlo\na lo largo de todo un dominio\n"
+                + "Pero ojo, ahora el dominio es un volumen,\npor lo tanto, debe ser una integral triple.");
+        desc9.setLayoutX(600);
+        desc9.setLayoutY(250);
+        desc9.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         btn10.setOnAction(e -> primaryStage.setScene(scene11));
         Pane layout10 = new Pane();
-        layout10.getChildren().addAll(label10, btn10);
+        layout10.getChildren().addAll(label10, btn10, imageView9, desc9);
         layout10.setStyle("-fx-background-color: #404A7C");
         scene10 = new Scene(layout10, 1000, 600);
         
         //Scene 11
         Label label11 = new Label("Paso 5");
+        label11.setLayoutX(450);
+        label11.setLayoutY(50);
+        label11.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image10 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso5.jpg"));
+        ImageView imageView10 = new ImageView(image10);
+        imageView10.setX(20);
+        imageView10.setY(100);
+        imageView10.setFitHeight(500);
+        imageView10.setFitWidth(550);
+        
+        Label desc10 = new Label("Ahora bien, procederemos a usar el metodo\nde Galerkin para no complicarse al momento\nde integrar.\n"
+                + "Separamos y desarrollamos cada integral para\ntener un mejor control de ellas y poder resolver.\n"
+                + "Y así, poder llegar a la forma fuerte.");
+        desc10.setLayoutX(580);
+        desc10.setLayoutY(250);
+        desc10.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn11 = new Button("Paso 6");
         btn11.setLayoutY(500);
         btn11.setLayoutX(850);
@@ -305,12 +379,29 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn11.setOnAction(e -> primaryStage.setScene(scene12));
         Pane layout11 = new Pane();
-        layout11.getChildren().addAll(label11, btn11);
+        layout11.getChildren().addAll(label11, btn11, imageView10, desc10);
         layout11.setStyle("-fx-background-color: #404A7C");
         scene11 = new Scene(layout11, 1000, 600);
         
         //Scene 12
         Label label12 = new Label("Paso 6");
+        label12.setLayoutX(450);
+        label12.setLayoutY(50);
+        label12.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image11 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso6.jpg"));
+        ImageView imageView11 = new ImageView(image11);
+        imageView11.setX(20);
+        imageView11.setY(100);
+        imageView11.setFitHeight(500);
+        imageView11.setFitWidth(550);
+        
+        Label desc11 = new Label("");
+        desc11.setLayoutX(580);
+        desc11.setLayoutY(250);
+        desc11.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn12 = new Button("Siguiente");
         btn12.setLayoutY(500);
         btn12.setLayoutX(850);
@@ -319,26 +410,46 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn12.setOnAction(e -> primaryStage.setScene(scene13));
         Pane layout12 = new Pane();
-        layout12.getChildren().addAll(label12, btn12);
+        layout12.getChildren().addAll(label12, btn12, imageView11);
         layout12.setStyle("-fx-background-color: #404A7C");
         scene12 = new Scene(layout12, 1000, 600);
         
         //Scene 13
         Label label13 = new Label("Definiendo componentes de matrices");
-        Button btn13 = new Button("Siguiente");
+        label13.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        Button btn13 = new Button("Sigamos");
         btn13.setLayoutY(500);
         btn13.setLayoutX(850);
         btn13.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
         btn13.setOnAction(e -> primaryStage.setScene(scene14));
-        Pane layout13 = new Pane();
+        VBox layout13 = new VBox(20);
         layout13.getChildren().addAll(label13, btn13);
+        layout13.setAlignment(Pos.CENTER);
         layout13.setStyle("-fx-background-color: #404A7C");
         scene13 = new Scene(layout13, 1000, 600);
         
         //Scene 14
         Label label14 = new Label("Matriz C");
+        label14.setLayoutX(450);
+        label14.setLayoutY(50);
+        label14.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image12 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\MatrizC.jpg"));
+        ImageView imageView12 = new ImageView(image12);
+        imageView12.setX(20);
+        imageView12.setY(100);
+        imageView12.setFitHeight(500);
+        imageView12.setFitWidth(550);
+        
+        Label desc12 = new Label("");
+        desc12.setLayoutX(580);
+        desc12.setLayoutY(250);
+        desc12.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn14 = new Button("Siguiente");
         btn14.setLayoutY(500);
         btn14.setLayoutX(850);
@@ -347,40 +458,61 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn14.setOnAction(e -> primaryStage.setScene(scene15));
         Pane layout14 = new Pane();
-        layout14.getChildren().addAll(label14, btn14);
+        layout14.getChildren().addAll(label14, btn14, imageView12, desc12);
         layout14.setStyle("-fx-background-color: #404A7C");
         scene14 = new Scene(layout14, 1000, 600);
         
         //Scene 15
-        Label label15 = new Label("Matriz -K");
+        Label label15 = new Label("Matriz -K y -L");
+        label15.setLayoutX(450);
+        label15.setLayoutY(50);
+        label15.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image13 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\MatrizKyL.jpg"));
+        ImageView imageView13 = new ImageView(image13);
+        imageView13.setX(20);
+        imageView13.setY(100);
+        imageView13.setFitHeight(500);
+        imageView13.setFitWidth(550);
+        
+        Label desc13 = new Label("");
+        desc13.setLayoutX(580);
+        desc13.setLayoutY(250);
+        desc13.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn15 = new Button("Siguiente");
         btn15.setLayoutY(500);
         btn15.setLayoutX(850);
         btn15.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
-        btn15.setOnAction(e -> primaryStage.setScene(scene16));
+        btn15.setOnAction(e -> primaryStage.setScene(scene17));
         Pane layout15 = new Pane();
-        layout15.getChildren().addAll(label15, btn15);
+        layout15.getChildren().addAll(label15, btn15,imageView13, desc13);
         layout15.setStyle("-fx-background-color: #404A7C");
         scene15 = new Scene(layout15, 1000, 600);
-
-        //Scene 16
-        Label label16 = new Label("Matriz -L");
-        Button btn16 = new Button("Siguiente");
-        btn16.setLayoutY(500);
-        btn16.setLayoutX(850);
-        btn16.setStyle("-fx-background-color: #CFCFBC; "
-                + "-fx-font: 2em 'sans-serif'; "
-                + "-fx-text-fill: #000000;");
-        btn16.setOnAction(e -> primaryStage.setScene(scene17));
-        Pane layout16 = new Pane();
-        layout16.getChildren().addAll(label16, btn16);
-        layout16.setStyle("-fx-background-color: #404A7C");
-        scene16 = new Scene(layout16, 1000, 600);
+        
         
         //Scene 17
         Label label17 = new Label("Matriz F");
+        label17.setLayoutX(450);
+        label17.setLayoutY(50);
+        label17.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image14 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\MatrizF.jpg"));
+        ImageView imageView14 = new ImageView(image14);
+        imageView14.setX(20);
+        imageView14.setY(100);
+        imageView14.setFitHeight(500);
+        imageView14.setFitWidth(550);
+        
+        Label desc14 = new Label("");
+        desc14.setLayoutX(580);
+        desc14.setLayoutY(250);
+        desc14.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn17 = new Button("Siguiente");
         btn17.setLayoutY(500);
         btn17.setLayoutX(850);
@@ -389,12 +521,29 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn17.setOnAction(e -> primaryStage.setScene(scene18));
         Pane layout17 = new Pane();
-        layout17.getChildren().addAll(label17, btn17);
+        layout17.getChildren().addAll(label17, btn17, imageView14, desc14);
         layout17.setStyle("-fx-background-color: #404A7C");
         scene17 = new Scene(layout17, 1000, 600);
         
         //Scene 18
         Label label18 = new Label("Matriz g");
+        label18.setLayoutX(450);
+        label18.setLayoutY(50);
+        label18.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image15 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Matrizg.jpg"));
+        ImageView imageView15 = new ImageView(image15);
+        imageView15.setX(20);
+        imageView15.setY(100);
+        imageView15.setFitHeight(500);
+        imageView15.setFitWidth(550);
+        
+        Label desc15 = new Label("");
+        desc15.setLayoutX(580);
+        desc15.setLayoutY(250);
+        desc15.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn18 = new Button("Siguiente");
         btn18.setLayoutY(500);
         btn18.setLayoutX(850);
@@ -403,12 +552,29 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn18.setOnAction(e -> primaryStage.setScene(scene19));
         Pane layout18 = new Pane();
-        layout18.getChildren().addAll(label18, btn18);
+        layout18.getChildren().addAll(label18, btn18, imageView15, desc15);
         layout18.setStyle("-fx-background-color: #404A7C");
         scene18 = new Scene(layout18, 1000, 600);
         
         //Scene 19
         Label label19 = new Label("Matriz h");
+        label19.setLayoutX(450);
+        label19.setLayoutY(50);
+        label19.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Image image16 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Matrizh.jpg"));
+        ImageView imageView16 = new ImageView(image16);
+        imageView16.setX(20);
+        imageView16.setY(100);
+        imageView16.setFitHeight(500);
+        imageView16.setFitWidth(550);
+        
+        Label desc16 = new Label("");
+        desc16.setLayoutX(580);
+        desc16.setLayoutY(250);
+        desc16.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn19 = new Button("Siguiente");
         btn19.setLayoutY(500);
         btn19.setLayoutX(850);
@@ -417,13 +583,18 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn19.setOnAction(e -> primaryStage.setScene(scene20));
         Pane layout19 = new Pane();
-        layout19.getChildren().addAll(label19, btn19);
+        layout19.getChildren().addAll(label19, btn19, imageView16, desc16);
         layout19.setStyle("-fx-background-color: #404A7C");
         scene19 = new Scene(layout19, 1000, 600);
         
         //Scene 20
         Label label20 = new Label("Ensamblaje");
-        Button btn20 = new Button("Siguiente");
+        label20.setLayoutX(450);
+        label20.setLayoutY(50);
+        label20.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Button btn20 = new Button("Paso 8");
         btn20.setLayoutY(500);
         btn20.setLayoutX(850);
         btn20.setStyle("-fx-background-color: #CFCFBC; "
@@ -437,7 +608,12 @@ public class Desafio extends Application {
         
         //Scene 21
         Label label21 = new Label("Paso 8");
-        Button btn21 = new Button("Siguiente");
+        label21.setLayoutX(450);
+        label21.setLayoutY(50);
+        label21.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
+        Button btn21 = new Button("Finish");
         btn21.setLayoutY(500);
         btn21.setLayoutX(850);
         btn21.setStyle("-fx-background-color: #CFCFBC; "
@@ -451,6 +627,11 @@ public class Desafio extends Application {
         
         //Scene22
         Label label22 = new Label("Espero les haya gustado!");
+        label22.setLayoutX(450);
+        label22.setLayoutY(50);
+        label22.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
+                + "-fx-text-fill: #FFFFFF;");
+        
         Button btn22 = new Button("Home");
         btn22.setLayoutY(500);
         btn22.setLayoutX(850);
@@ -460,6 +641,7 @@ public class Desafio extends Application {
         btn22.setOnAction(e -> primaryStage.setScene(scene1));
         VBox layout22 = new VBox(20);
         layout22.getChildren().addAll(label22, btn22);
+        layout22.setAlignment(Pos.CENTER);
         layout22.setStyle("-fx-background-color: #404A7C");
         scene22 = new Scene(layout22, 1000, 600);
         
