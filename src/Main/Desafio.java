@@ -300,7 +300,8 @@ public class Desafio extends Application {
         imageView8.setFitHeight(150);
         imageView8.setFitWidth(900);
         
-        Label desc8 = new Label("En este paso solo se despeja toda la ecuacion para el lado izquierdo e aplicar ha ambas ecuaciones la\ndefinicion del residual a cada una.");
+        Label desc8 = new Label("En este paso solo se despeja toda la ecuacion para el lado izquierdo e aplicar ha ambas ecuaciones la\n"
+                + "definicion del residual a cada una.");
         desc8.setLayoutX(25);
         desc8.setLayoutY(420);
         desc8.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
@@ -392,13 +393,15 @@ public class Desafio extends Application {
         
         Image image11 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso6.jpg"));
         ImageView imageView11 = new ImageView(image11);
-        imageView11.setX(20);
+        imageView11.setX(15);
         imageView11.setY(100);
         imageView11.setFitHeight(500);
         imageView11.setFitWidth(550);
         
-        Label desc11 = new Label("");
-        desc11.setLayoutX(580);
+        Label desc11 = new Label("Debido a la situacion de que en cada integral E\ny F existe una doble derivacion "
+                + "se procedera\na usar la formula de la vaca o mejor conocida\ncomo integracion por partes.\n"
+                + "Haciendo esto, se llega a un nuevo sistema de\necuaciones lineales llamado Weak Form");
+        desc11.setLayoutX(570);
         desc11.setLayoutY(250);
         desc11.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
@@ -410,7 +413,7 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn12.setOnAction(e -> primaryStage.setScene(scene13));
         Pane layout12 = new Pane();
-        layout12.getChildren().addAll(label12, btn12, imageView11);
+        layout12.getChildren().addAll(label12, btn12, imageView11, desc11);
         layout12.setStyle("-fx-background-color: #404A7C");
         scene12 = new Scene(layout12, 1000, 600);
         
@@ -434,7 +437,7 @@ public class Desafio extends Application {
         //Scene 14
         Label label14 = new Label("Matriz C");
         label14.setLayoutX(450);
-        label14.setLayoutY(50);
+        label14.setLayoutY(30);
         label14.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -445,9 +448,11 @@ public class Desafio extends Application {
         imageView12.setFitHeight(500);
         imageView12.setFitWidth(550);
         
-        Label desc12 = new Label("");
+        Label desc12 = new Label("Esta matriz se desarrolla casi de inmediato\ndebido a que la N^T ya se encuentra definida,\n"
+                + "cabe mencionar que se uso un metodo de\n'Galerkin Modificado' para que no hubiera pro-\nblema con las dimensiones de las matrices.\n\n"
+                + "Por cierto, se necesito realizar un cambio de\nvariable e interpolar las variables x y y para\nque se pudiera realizar la integral.");
         desc12.setLayoutX(580);
-        desc12.setLayoutY(250);
+        desc12.setLayoutY(215);
         desc12.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
         Button btn14 = new Button("Siguiente");
@@ -464,8 +469,8 @@ public class Desafio extends Application {
         
         //Scene 15
         Label label15 = new Label("Matriz -K y -L");
-        label15.setLayoutX(450);
-        label15.setLayoutY(50);
+        label15.setLayoutX(400);
+        label15.setLayoutY(30);
         label15.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -476,9 +481,11 @@ public class Desafio extends Application {
         imageView13.setFitHeight(500);
         imageView13.setFitWidth(550);
         
-        Label desc13 = new Label("");
+        Label desc13 = new Label("Estas matrices se pusieron juntas debido a que\nes exactamente el mismo proceso para ambas, se realiza\n"
+                + "casi de inmediato porque esas matrices ya se\nencuentran definidas por un mismo valor.\n\n"
+                + "Al igual que en la matriz se realizó un cambio\nde variable e interpolacion.");
         desc13.setLayoutX(580);
-        desc13.setLayoutY(250);
+        desc13.setLayoutY(225);
         desc13.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
         Button btn15 = new Button("Siguiente");
@@ -497,7 +504,7 @@ public class Desafio extends Application {
         //Scene 17
         Label label17 = new Label("Matriz F");
         label17.setLayoutX(450);
-        label17.setLayoutY(50);
+        label17.setLayoutY(30);
         label17.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -508,7 +515,8 @@ public class Desafio extends Application {
         imageView14.setFitHeight(500);
         imageView14.setFitWidth(550);
         
-        Label desc14 = new Label("");
+        Label desc14 = new Label("Esta matriz es exactamente igual a la matriz C,\npor lo que, es el mismo proceso para resolverla.\n\n"
+                + "La unica variante es que en esta integral la va-\nriable que multiplica no es solo 'x' sino '(x+y)'");
         desc14.setLayoutX(580);
         desc14.setLayoutY(250);
         desc14.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
@@ -528,7 +536,7 @@ public class Desafio extends Application {
         //Scene 18
         Label label18 = new Label("Matriz g");
         label18.setLayoutX(450);
-        label18.setLayoutY(50);
+        label18.setLayoutY(30);
         label18.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -539,7 +547,8 @@ public class Desafio extends Application {
         imageView15.setFitHeight(500);
         imageView15.setFitWidth(550);
         
-        Label desc15 = new Label("");
+        Label desc15 = new Label("Esta matriz es sencilla debido a que ya tiene\nvalores definidos dentro de ella y porque el\nproceso "
+                + "ya se encuentra definido, por lo que,\nsolo se necesita sustituir valores e integrar.");
         desc15.setLayoutX(580);
         desc15.setLayoutY(250);
         desc15.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
@@ -559,7 +568,7 @@ public class Desafio extends Application {
         //Scene 19
         Label label19 = new Label("Matriz h");
         label19.setLayoutX(450);
-        label19.setLayoutY(50);
+        label19.setLayoutY(30);
         label19.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -570,7 +579,7 @@ public class Desafio extends Application {
         imageView16.setFitHeight(500);
         imageView16.setFitWidth(550);
         
-        Label desc16 = new Label("");
+        Label desc16 = new Label("Al igual que la matriz anterior es sencilla\n y se resuleve casi de golpe.");
         desc16.setLayoutX(580);
         desc16.setLayoutY(250);
         desc16.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
@@ -583,7 +592,7 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #000000;");
         btn19.setOnAction(e -> primaryStage.setScene(scene20));
         Pane layout19 = new Pane();
-        layout19.getChildren().addAll(label19, btn19, imageView16, desc16);
+        layout19.getChildren().addAll(label19, btn19, imageView16,desc16);
         layout19.setStyle("-fx-background-color: #404A7C");
         scene19 = new Scene(layout19, 1000, 600);
         
