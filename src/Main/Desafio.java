@@ -755,8 +755,8 @@ public class Desafio extends Application {
         
         //Scene 20
         Label label20 = new Label("Ensamblaje");
-        label20.setLayoutX(750);
-        label20.setLayoutY(250);
+        label20.setLayoutX(770);
+        label20.setLayoutY(220);
         label20.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
@@ -774,7 +774,7 @@ public class Desafio extends Application {
         Label desc = new Label("Debido a que el proceso de ensamblaje es muy largo,\nsolo se muestra una pequeña simulacion de como "
                 + "se\nva realizando en el ensamblaje.\n\nPara esta caso solo se realiza la primera linea del sistema local.");
         desc.setLayoutX(25);
-        desc.setLayoutY(480);
+        desc.setLayoutY(450);
         desc.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
         Button btn20 = new Button("Paso 8");
@@ -806,6 +806,24 @@ public class Desafio extends Application {
         label21.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         
+        Image image17 = new Image(new FileInputStream("C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Paso8.jpg"));
+        ImageView imageView17 = new ImageView(image17);
+        imageView17.setX(160);
+        imageView17.setY(150);
+        imageView17.setFitHeight(250);
+        imageView17.setFitWidth(250);
+        
+        Label descp = new Label("Aca es donde se aplican las condiciones Neuman\ny Dirichlet tomadndo como referencia, los nodos\nen ndonde son"
+                + " aplicadas ambas condiciones.\n"
+                + "Pues esto logra modificar el sistema matricial final\nque obtuvimos del ensamblaje haciendolo mucho\nmas pequeño"
+                + " y facil de manejar.\n\n"
+                + "Por lo que en las condiciones de Neuman solo se\nagrega un vector que suma al vector 'b' que contiene\nlas matrices g y"
+                + " h, y en las condiciones de Dirichlet\ntoman valor de incognitas A y B que provocan que\ndesaparezcan las filas solo donde fue "
+                + "aplicada esta\ncondicion.");
+        descp.setLayoutX(500);
+        descp.setLayoutY(150);
+        descp.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
+        
         Button btn21 = new Button("Finish");
         btn21.setLayoutY(500);
         btn21.setLayoutX(850);
@@ -824,7 +842,7 @@ public class Desafio extends Application {
         
         btn21.setOnAction(e -> primaryStage.setScene(scene22));
         Pane layout21 = new Pane();
-        layout21.getChildren().addAll(label21, btn21,atras18);
+        layout21.getChildren().addAll(label21, btn21,atras18, imageView17,descp);
         layout21.setStyle("-fx-background-color: #404A7C");
         scene21 = new Scene(layout21, 1000, 600);
         
