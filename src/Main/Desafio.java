@@ -5,6 +5,7 @@
  */
 package Main;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import javafx.application.Application;
@@ -21,6 +22,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -85,9 +89,17 @@ public class Desafio extends Application {
         btn2.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        Button atras = new Button("Anterior");
+        atras.setLayoutY(500);
+        atras.setLayoutX(650);
+        atras.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras.setOnAction(e -> primaryStage.setScene(scene1));
         btn2.setOnAction(e -> primaryStage.setScene(scene3));
         Pane layout2 = new Pane();
-        layout2.getChildren().addAll(texto,btn2,imageView, desc1);
+        layout2.getChildren().addAll(texto,btn2,imageView, desc1, atras);
         layout2.setStyle("-fx-background-color: #404A7C");
         scene2 = new Scene(layout2, 1000, 600);
         
@@ -112,14 +124,22 @@ public class Desafio extends Application {
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
         
+        Button atras1 = new Button("Anterior");
+        atras1.setLayoutY(500);
+        atras1.setLayoutX(650);
+        atras1.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
         Label desc2 = new Label("Definir un Dominio es especificar la\nfigura sobre la que se aplicara el MEF,\npara este caso se decidió utilizar un\nparalelepipedo.");
         desc2.setLayoutX(650);
         desc2.setLayoutY(250);
         desc2.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
+        atras1.setOnAction(e -> primaryStage.setScene(scene2));
         btn3.setOnAction(e -> primaryStage.setScene(scene4));
         Pane layout3 = new Pane();
-        layout3.getChildren().addAll(label3, btn3, imageView2, desc2);
+        layout3.getChildren().addAll(label3, btn3, imageView2, desc2,atras1);
         layout3.setStyle("-fx-background-color: #404A7C");
         scene3 = new Scene(layout3, 1000, 600);
 
@@ -149,9 +169,17 @@ public class Desafio extends Application {
         btn4.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras2 = new Button("Anterior");
+        atras2.setLayoutY(500);
+        atras2.setLayoutX(650);
+        atras2.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        atras2.setOnAction(e -> primaryStage.setScene(scene3));
         btn4.setOnAction(e -> primaryStage.setScene(scene5));
         Pane layout4 = new Pane();
-        layout4.getChildren().addAll(label4, btn4, imageView3, desc3);
+        layout4.getChildren().addAll(label4, btn4, imageView3, desc3,atras2);
         layout4.setStyle("-fx-background-color: #404A7C");
         scene4 = new Scene(layout4, 1000, 600);   
         
@@ -181,9 +209,18 @@ public class Desafio extends Application {
         btn5.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras3 = new Button("Anterior");
+        atras3.setLayoutY(500);
+        atras3.setLayoutX(650);
+        atras3.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras3.setOnAction(e -> primaryStage.setScene(scene4));
         btn5.setOnAction(e -> primaryStage.setScene(scene6));
         Pane layout5 = new Pane();
-        layout5.getChildren().addAll(label5, btn5, imageView4, desc4);
+        layout5.getChildren().addAll(label5, btn5, imageView4, desc4, atras3);
         layout5.setStyle("-fx-background-color: #404A7C");
         scene5 = new Scene(layout5, 1000, 600);        
         
@@ -214,9 +251,17 @@ public class Desafio extends Application {
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
         
+        Button atras4 = new Button("Anterior");
+        atras4.setLayoutY(500);
+        atras4.setLayoutX(650);
+        atras4.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras4.setOnAction(e -> primaryStage.setScene(scene5));
         btn6.setOnAction(e -> primaryStage.setScene(scene7));
         Pane layout6 = new Pane();
-        layout6.getChildren().addAll(label6, btn6, imageView5, desc5);
+        layout6.getChildren().addAll(label6, btn6, imageView5, desc5, atras4);
         layout6.setStyle("-fx-background-color: #404A7C");
         scene6 = new Scene(layout6, 1000, 600);
         
@@ -247,9 +292,18 @@ public class Desafio extends Application {
         btn7.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras5 = new Button("Anterior");
+        atras5.setLayoutY(500);
+        atras5.setLayoutX(650);
+        atras5.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras5.setOnAction(e -> primaryStage.setScene(scene6));
         btn7.setOnAction(e -> primaryStage.setScene(scene8));
         Pane layout7 = new Pane();
-        layout7.getChildren().addAll(label7, btn7, imageView6, desc6);
+        layout7.getChildren().addAll(label7, btn7, imageView6, desc6,atras5);
         layout7.setStyle("-fx-background-color: #404A7C");
         scene7 = new Scene(layout7, 1000, 600);
         
@@ -280,9 +334,17 @@ public class Desafio extends Application {
         desc7.setLayoutY(250);
         desc7.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
+        Button atras6 = new Button("Anterior");
+        atras6.setLayoutY(500);
+        atras6.setLayoutX(650);
+        atras6.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras6.setOnAction(e -> primaryStage.setScene(scene7));
         btn8.setOnAction(e -> primaryStage.setScene(scene9));
         Pane layout8 = new Pane();
-        layout8.getChildren().addAll(label8, btn8, imageView7,desc7);
+        layout8.getChildren().addAll(label8, btn8, imageView7,desc7,atras6);
         layout8.setStyle("-fx-background-color: #404A7C");
         scene8 = new Scene(layout8, 1000, 600);
         
@@ -312,9 +374,18 @@ public class Desafio extends Application {
         btn9.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras7 = new Button("Anterior");
+        atras7.setLayoutY(500);
+        atras7.setLayoutX(650);
+        atras7.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras7.setOnAction(e -> primaryStage.setScene(scene8));
         btn9.setOnAction(e -> primaryStage.setScene(scene10));
         Pane layout9 = new Pane();
-        layout9.getChildren().addAll(label9, btn9, imageView8, desc8);
+        layout9.getChildren().addAll(label9, btn9, imageView8, desc8, atras7);
         layout9.setStyle("-fx-background-color: #404A7C");
         scene9 = new Scene(layout9, 1000, 600);
 
@@ -345,9 +416,18 @@ public class Desafio extends Application {
         desc9.setLayoutY(250);
         desc9.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
+        Button atras8 = new Button("Anterior");
+        atras8.setLayoutY(500);
+        atras8.setLayoutX(650);
+        atras8.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras8.setOnAction(e -> primaryStage.setScene(scene9));
+        
         btn10.setOnAction(e -> primaryStage.setScene(scene11));
         Pane layout10 = new Pane();
-        layout10.getChildren().addAll(label10, btn10, imageView9, desc9);
+        layout10.getChildren().addAll(label10, btn10, imageView9, desc9,atras8);
         layout10.setStyle("-fx-background-color: #404A7C");
         scene10 = new Scene(layout10, 1000, 600);
         
@@ -378,9 +458,19 @@ public class Desafio extends Application {
         btn11.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras9 = new Button("Anterior");
+        atras9.setLayoutY(500);
+        atras9.setLayoutX(650);
+        atras9.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras9.setOnAction(e -> primaryStage.setScene(scene10));
+        
         btn11.setOnAction(e -> primaryStage.setScene(scene12));
         Pane layout11 = new Pane();
-        layout11.getChildren().addAll(label11, btn11, imageView10, desc10);
+        layout11.getChildren().addAll(label11, btn11, imageView10, desc10,atras9);
         layout11.setStyle("-fx-background-color: #404A7C");
         scene11 = new Scene(layout11, 1000, 600);
         
@@ -411,9 +501,19 @@ public class Desafio extends Application {
         btn12.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras10 = new Button("Anterior");
+        atras10.setLayoutY(500);
+        atras10.setLayoutX(650);
+        atras10.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras10.setOnAction(e -> primaryStage.setScene(scene11));
+        
         btn12.setOnAction(e -> primaryStage.setScene(scene13));
         Pane layout12 = new Pane();
-        layout12.getChildren().addAll(label12, btn12, imageView11, desc11);
+        layout12.getChildren().addAll(label12, btn12, imageView11, desc11, atras10);
         layout12.setStyle("-fx-background-color: #404A7C");
         scene12 = new Scene(layout12, 1000, 600);
         
@@ -422,14 +522,20 @@ public class Desafio extends Application {
         label13.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
         Button btn13 = new Button("Sigamos");
-        btn13.setLayoutY(500);
-        btn13.setLayoutX(850);
         btn13.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras11 = new Button("Anterior");
+        atras11.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras11.setOnAction(e -> primaryStage.setScene(scene12));
+        
         btn13.setOnAction(e -> primaryStage.setScene(scene14));
         VBox layout13 = new VBox(20);
-        layout13.getChildren().addAll(label13, btn13);
+        layout13.getChildren().addAll(label13, btn13,atras11);
         layout13.setAlignment(Pos.CENTER);
         layout13.setStyle("-fx-background-color: #404A7C");
         scene13 = new Scene(layout13, 1000, 600);
@@ -461,9 +567,19 @@ public class Desafio extends Application {
         btn14.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras12 = new Button("Anterior");
+        atras12.setLayoutY(500);
+        atras12.setLayoutX(650);
+        atras12.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras12.setOnAction(e -> primaryStage.setScene(scene13));
+        
         btn14.setOnAction(e -> primaryStage.setScene(scene15));
         Pane layout14 = new Pane();
-        layout14.getChildren().addAll(label14, btn14, imageView12, desc12);
+        layout14.getChildren().addAll(label14, btn14, imageView12, desc12,atras12);
         layout14.setStyle("-fx-background-color: #404A7C");
         scene14 = new Scene(layout14, 1000, 600);
         
@@ -494,9 +610,19 @@ public class Desafio extends Application {
         btn15.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras13 = new Button("Anterior");
+        atras13.setLayoutY(500);
+        atras13.setLayoutX(650);
+        atras13.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras13.setOnAction(e -> primaryStage.setScene(scene15));
+        
         btn15.setOnAction(e -> primaryStage.setScene(scene17));
         Pane layout15 = new Pane();
-        layout15.getChildren().addAll(label15, btn15,imageView13, desc13);
+        layout15.getChildren().addAll(label15, btn15,imageView13, desc13,atras13);
         layout15.setStyle("-fx-background-color: #404A7C");
         scene15 = new Scene(layout15, 1000, 600);
         
@@ -527,9 +653,19 @@ public class Desafio extends Application {
         btn17.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras14 = new Button("Anterior");
+        atras14.setLayoutY(500);
+        atras14.setLayoutX(650);
+        atras14.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras14.setOnAction(e -> primaryStage.setScene(scene16));
+        
         btn17.setOnAction(e -> primaryStage.setScene(scene18));
         Pane layout17 = new Pane();
-        layout17.getChildren().addAll(label17, btn17, imageView14, desc14);
+        layout17.getChildren().addAll(label17, btn17, imageView14, desc14,atras14);
         layout17.setStyle("-fx-background-color: #404A7C");
         scene17 = new Scene(layout17, 1000, 600);
         
@@ -559,9 +695,19 @@ public class Desafio extends Application {
         btn18.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras15 = new Button("Anterior");
+        atras15.setLayoutY(500);
+        atras15.setLayoutX(650);
+        atras15.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras15.setOnAction(e -> primaryStage.setScene(scene17));
+        
         btn18.setOnAction(e -> primaryStage.setScene(scene19));
         Pane layout18 = new Pane();
-        layout18.getChildren().addAll(label18, btn18, imageView15, desc15);
+        layout18.getChildren().addAll(label18, btn18, imageView15, desc15, atras15);
         layout18.setStyle("-fx-background-color: #404A7C");
         scene18 = new Scene(layout18, 1000, 600);
         
@@ -579,7 +725,8 @@ public class Desafio extends Application {
         imageView16.setFitHeight(500);
         imageView16.setFitWidth(550);
         
-        Label desc16 = new Label("Al igual que la matriz anterior es sencilla\n y se resuleve casi de golpe.");
+        Label desc16 = new Label("Al igual que la matriz anterior es sencilla\n y se resuelve casi de golpe.\n"
+                + "Los unicos valores que cambian son los numeros que multiplican\na las matrices.");
         desc16.setLayoutX(580);
         desc16.setLayoutY(250);
         desc16.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
@@ -590,18 +737,45 @@ public class Desafio extends Application {
         btn19.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras16 = new Button("Anterior");
+        atras16.setLayoutY(500);
+        atras16.setLayoutX(650);
+        atras16.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras16.setOnAction(e -> primaryStage.setScene(scene18));
+        
         btn19.setOnAction(e -> primaryStage.setScene(scene20));
         Pane layout19 = new Pane();
-        layout19.getChildren().addAll(label19, btn19, imageView16,desc16);
+        layout19.getChildren().addAll(label19, btn19, imageView16,desc16,atras16);
         layout19.setStyle("-fx-background-color: #404A7C");
         scene19 = new Scene(layout19, 1000, 600);
         
         //Scene 20
         Label label20 = new Label("Ensamblaje");
-        label20.setLayoutX(450);
-        label20.setLayoutY(50);
+        label20.setLayoutX(750);
+        label20.setLayoutY(250);
         label20.setStyle("-fx-font: normal bold 2em 'sans-serif'; "
                 + "-fx-text-fill: #FFFFFF;");
+        
+        String path = "C:\\Users\\giron\\NetBeansProjects\\Desafio\\src\\images\\Ensamblaje.mp4";
+        
+        Media media = new Media(new File(path).toURI().toString());
+        
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
+        
+        mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+        mediaPlayer.play();
+        
+        MediaView mediaView = new MediaView(mediaPlayer);
+        
+        Label desc = new Label("Debido a que el proceso de ensamblaje es muy largo,\nsolo se muestra una pequeña simulacion de como "
+                + "se\nva realizando en el ensamblaje.\n\nPara esta caso solo se realiza la primera linea del sistema local.");
+        desc.setLayoutX(25);
+        desc.setLayoutY(480);
+        desc.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
         
         Button btn20 = new Button("Paso 8");
         btn20.setLayoutY(500);
@@ -609,9 +783,19 @@ public class Desafio extends Application {
         btn20.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras17 = new Button("Anterior");
+        atras17.setLayoutY(500);
+        atras17.setLayoutX(650);
+        atras17.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras17.setOnAction(e -> primaryStage.setScene(scene19));
+        
         btn20.setOnAction(e -> primaryStage.setScene(scene21));
         Pane layout20 = new Pane();
-        layout20.getChildren().addAll(label20, btn20);
+        layout20.getChildren().addAll(label20, btn20, atras17,mediaView,desc);
         layout20.setStyle("-fx-background-color: #404A7C");
         scene20 = new Scene(layout20, 1000, 600);
         
@@ -628,9 +812,19 @@ public class Desafio extends Application {
         btn21.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
+        
+        Button atras18 = new Button("Anterior");
+        atras18.setLayoutY(500);
+        atras18.setLayoutX(650);
+        atras18.setStyle("-fx-background-color: #CFCFBC; "
+                + "-fx-font: 2em 'sans-serif'; "
+                + "-fx-text-fill: #000000;");
+        
+        atras18.setOnAction(e -> primaryStage.setScene(scene20));
+        
         btn21.setOnAction(e -> primaryStage.setScene(scene22));
         Pane layout21 = new Pane();
-        layout21.getChildren().addAll(label21, btn21);
+        layout21.getChildren().addAll(label21, btn21,atras18);
         layout21.setStyle("-fx-background-color: #404A7C");
         scene21 = new Scene(layout21, 1000, 600);
         
@@ -642,8 +836,6 @@ public class Desafio extends Application {
                 + "-fx-text-fill: #FFFFFF;");
         
         Button btn22 = new Button("Home");
-        btn22.setLayoutY(500);
-        btn22.setLayoutX(850);
         btn22.setStyle("-fx-background-color: #CFCFBC; "
                 + "-fx-font: 2em 'sans-serif'; "
                 + "-fx-text-fill: #000000;");
