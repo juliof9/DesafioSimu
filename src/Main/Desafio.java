@@ -721,8 +721,8 @@ public class Desafio extends Application {
         imageView16.setFitHeight(500);
         imageView16.setFitWidth(550);
         
-        Label desc16 = new Label("Al igual que la matriz anterior es sencilla\n y se resuelve casi de golpe.\n"
-                + "Los unicos valores que cambian son los numeros que multiplican\na las matrices.");
+        Label desc16 = new Label("Al igual que la matriz anterior es sencilla y se\nresuelve casi de golpe.\n"
+                + "Los unicos valores que cambian son los nume-\nros que multiplican a las matrices.");
         desc16.setLayoutX(580);
         desc16.setLayoutY(250);
         desc16.setStyle("-fx-text-fill: #FFFFFF; -fx-font: normal 20px 'sans-serif'; ");
